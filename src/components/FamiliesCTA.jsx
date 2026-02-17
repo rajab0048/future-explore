@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 function FamiliesCTA() {
+  const navigate = useNavigate();
+
+  const handleStartTrial = () => {
+    navigate('/auth');
+  };
   return (
     <section className="mt-20 lg:mt-24">
       <div className="rounded-[32px] bg-gradient-to-r from-[#ff5a3c] via-[#ff6f7a] to-[#ff7ad9] px-4 py-14 sm:px-10 lg:px-20 text-center text-white shadow-[0_24px_60px_rgba(248,113,113,0.55)]">
@@ -39,7 +46,10 @@ function FamiliesCTA() {
           adventure.
         </p>
 
-        <button className="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-white/90 bg-white/0 px-8 py-3 text-sm sm:text-base font-semibold text-white hover:bg-white/10 transition-all shadow-[0_14px_30px_rgba(15,23,42,0.18)]">
+        <button 
+          onClick={handleStartTrial}
+          className="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-white/90 bg-white/0 px-8 py-3 text-sm sm:text-base font-semibold text-white hover:bg-white/10 transition-all shadow-[0_14px_30px_rgba(15,23,42,0.18)]"
+        >
           <span className="inline-flex h-4 w-4 items-center justify-center">
             <svg className="h-4 w-4" viewBox="0 0 20 20" fill="none">
               <path

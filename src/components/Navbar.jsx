@@ -1,7 +1,17 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate('/auth');
+  };
+
+  const handleSignup = () => {
+    navigate('/auth');
+  };
 
   return (
     <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-100">
@@ -24,16 +34,25 @@ function Navbar() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4 text-sm">
-            <button className="text-slate-600 hover:text-slate-900 transition-colors">
+            <button 
+              onClick={handleLogin}
+              className="text-slate-600 hover:text-slate-900 transition-colors"
+            >
               Log In
             </button>
-            <button className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold shadow-md hover:shadow-lg transition-all">
+            <button 
+              onClick={handleSignup}
+              className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold shadow-md hover:shadow-lg transition-all"
+            >
               Start Free
             </button>
           </div>
 
           <div className="flex items-center gap-3 lg:hidden">
-            <button className="hidden sm:inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white text-xs font-semibold shadow-md hover:shadow-lg transition-all">
+            <button 
+              onClick={handleSignup}
+              className="hidden sm:inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white text-xs font-semibold shadow-md hover:shadow-lg transition-all"
+            >
               Start Free
             </button>
             <button
@@ -68,8 +87,16 @@ function Navbar() {
           <button className="block w-full text-left py-2">Features</button>
           <button className="block w-full text-left py-2">How It Works</button>
           <div className="h-px bg-slate-100 my-2" />
-          <button className="block w-full text-left py-2">Log In</button>
-          <button className="mt-1 w-full rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold py-2 shadow-md">
+          <button 
+            onClick={handleLogin}
+            className="block w-full text-left py-2"
+          >
+            Log In
+          </button>
+          <button 
+            onClick={handleSignup}
+            className="mt-1 w-full rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold py-2 shadow-md"
+          >
             Start Free
           </button>
         </div>

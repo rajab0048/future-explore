@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 function Hero() {
+  const navigate = useNavigate();
+
+  const handleStartJourney = () => {
+    navigate('/auth');
+  };
   return (
     <section className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
       <div className="space-y-6">
@@ -29,7 +36,10 @@ function Hero() {
         </p>
 
         <div className="flex flex-wrap items-center gap-4">
-          <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold text-sm shadow-lg hover:shadow-xl hover:brightness-105 transition-all">
+          <button 
+            onClick={handleStartJourney}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold text-sm shadow-lg hover:shadow-xl hover:brightness-105 transition-all"
+          >
             <span className="inline-flex h-4 w-4 items-center justify-center">
               <svg className="h-4 w-4" viewBox="0 0 20 20" fill="none">
                 <path
