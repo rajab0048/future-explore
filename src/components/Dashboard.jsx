@@ -36,7 +36,7 @@ const Dashboard = () => {
   };
 
   const handleAddExplorer = () => {
-    navigate('create-explorer');
+    navigate('/create-explorer');
   };
 
   const getAvatarEmoji = (avatarId) => {

@@ -76,7 +76,7 @@ const CreateExplorer = () => {
     console.log('Navigating to /dashboard');
     
     // Navigate to main dashboard using relative path
-    navigate('dashboard');
+    navigate('/dashboard');
   };
 
   return (

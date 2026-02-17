@@ -4,7 +4,7 @@ function FamiliesCTA() {
   const navigate = useNavigate();
 
   const handleStartTrial = () => {
-    navigate('auth');
+    navigate('/auth');
   };
   return (
     <section className="mt-20 lg:mt-24">
