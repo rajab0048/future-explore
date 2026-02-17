@@ -75,8 +75,8 @@ const CreateExplorer = () => {
     console.log('Saved explorers:', updatedExplorers);
     console.log('Navigating to /dashboard');
     
-    // Navigate to main dashboard
-    navigate('/dashboard');
+    // Navigate to main dashboard using relative path
+    navigate('dashboard');
   };
 
   return (

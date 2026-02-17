@@ -33,7 +33,7 @@ const Signup = ({ onSwitchToLogin }) => {
           password,
         };
         signup(userData);
-        navigate('/dashboard');
+        navigate('dashboard');
       } else {
         throw new Error('Please fill in all fields');
       }

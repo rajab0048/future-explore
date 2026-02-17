@@ -4,7 +4,7 @@ function Hero() {
   const navigate = useNavigate();
 
   const handleStartJourney = () => {
-    navigate('/auth');
+    navigate('auth');
   };
   return (
     <section className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">

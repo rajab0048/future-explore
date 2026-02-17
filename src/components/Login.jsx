@@ -21,7 +21,7 @@ const Login = ({ onSwitchToSignup }) => {
       // Simple validation (in real app, this would be server-side)
       if (email && password) {
         login(email, password);
-        navigate('/dashboard');
+        navigate('dashboard');
       } else {
         alert('Please fill in all fields');
       }

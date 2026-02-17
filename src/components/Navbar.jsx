@@ -6,11 +6,11 @@ function Navbar() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    navigate('/auth');
+    navigate('auth');
   };
 
   const handleSignup = () => {
-    navigate('/auth');
+    navigate('auth');
   };
 
   return (
